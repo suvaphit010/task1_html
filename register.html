@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบลงทะเบียนนักศึกษาใหม่ - วิทยาลัยเทคนิคสุราษฎร์ธานี</title>
+</head>
+<body bgcolor="#eef2f7">
+
+    <!-- ตารางหลักตรงกลางหน้าจอ สร้างกรอบสีขาวคล้าย Card -->
+    <table width="720" align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- ส่วนหัวของเว็บเพจ (Header) -->
+        <tr>
+            <td bgcolor="#1e3a8a" align="center">
+                <header>
+                    <br>
+                    <h1><font color="#ffffff">🎓 ระบบลงทะเบียนนักศึกษาใหม่</font></h1>
+                    <p><font color="#dbeafe">แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคสุราษฎร์ธานี</font></p>
+                    <p><font color="#93c5fd" size="2">กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง เพื่อใช้ในการจัดทำประวัตินักศึกษาเข้าสู่ระบบฐานข้อมูล</font></p>
+                    <br>
+                </header>
+            </td>
+        </tr>
+
+        <!-- เส้นแถบสีตกแต่งใต้ Header -->
+        <tr>
+            <td bgcolor="#f59e0b" height="5"></td>
+        </tr>
+
+        <!-- พื้นที่หลักในการวางแบบฟอร์ม (Main) -->
+        <tr>
+            <td>
+                <main>
+                    <form>
+                        <table width="100%" border="0" cellpadding="24" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <!-- หมวดที่ 1: ข้อมูลการเข้าสู่ระบบ -->
+                                    <fieldset>
+                                        <legend>
+                                            <font color="#1e3a8a" size="4"><strong>&nbsp;🔐 หมวดที่ 1: ข้อมูลการเข้าสู่ระบบ&nbsp;</strong></font>
+                                        </legend>
+                                        <table width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#f8fafc">
+                                            <tr>
+                                                <td width="35%" align="right">
+                                                    <label for="username"><strong>ชื่อผู้ใช้ (Username) <font color="#dc2626">*</font> :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="username" name="username" size="30" required>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    <label for="password"><strong>รหัสผ่าน (Password) <font color="#dc2626">*</font> :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="password" id="password" name="password" size="30" required>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </fieldset>
+
+                                    <br>
+
+                                    <!-- หมวดที่ 2: ข้อมูลส่วนตัว -->
+                                    <fieldset>
+                                        <legend>
+                                            <font color="#1e3a8a" size="4"><strong>&nbsp;👤 หมวดที่ 2: ข้อมูลส่วนตัว&nbsp;</strong></font>
+                                        </legend>
+                                        <table width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#f8fafc">
+                                            <tr>
+                                                <td width="35%" align="right">
+                                                    <label for="fullname"><strong>ชื่อ-นามสกุล :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="fullname" name="fullname" size="38" placeholder="เช่น นายสมชาย ใจดี">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    <label for="email"><strong>อีเมล :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="email" id="email" name="email" size="38" placeholder="example@email.com">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    <label for="birthdate"><strong>วัน/เดือน/ปีเกิด :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="date" id="birthdate" name="birthdate">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">
+                                                    <label><strong>เพศ :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="radio" id="gender_male" name="gender" value="male">
+                                                    <label for="gender_male">ชาย</label>
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <input type="radio" id="gender_female" name="gender" value="female">
+                                                    <label for="gender_female">หญิง</label>
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <input type="radio" id="gender_other" name="gender" value="other">
+                                                    <label for="gender_other">อื่นๆ</label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </fieldset>
+
+                                    <br>
+
+                                    <!-- หมวดที่ 3: ข้อมูลการศึกษาและอื่นๆ -->
+                                    <fieldset>
+                                        <legend>
+                                            <font color="#1e3a8a" size="4"><strong>&nbsp;📚 หมวดที่ 3: ข้อมูลการศึกษาและอื่นๆ&nbsp;</strong></font>
+                                        </legend>
+                                        <table width="100%" border="0" cellpadding="8" cellspacing="0" bgcolor="#f8fafc">
+                                            <tr>
+                                                <td width="35%" align="right">
+                                                    <label for="education_level"><strong>ระดับชั้น :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <select id="education_level" name="education_level">
+                                                        <option value="">-- กรุณาเลือกระดับชั้น --</option>
+                                                        <option value="ปวช.1">ปวช.1 (ประกาศนียบัตรวิชาชีพ ชั้นปีที่ 1)</option>
+                                                        <option value="ปวช.2">ปวช.2 (ประกาศนียบัตรวิชาชีพ ชั้นปีที่ 2)</option>
+                                                        <option value="ปวช.3">ปวช.3 (ประกาศนียบัตรวิชาชีพ ชั้นปีที่ 3)</option>
+                                                        <option value="ปวส.1">ปวส.1 (ประกาศนียบัตรวิชาชีพชั้นสูง ชั้นปีที่ 1)</option>
+                                                        <option value="ปวส.2">ปวส.2 (ประกาศนียบัตรวิชาชีพชั้นสูง ชั้นปีที่ 2)</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="top">
+                                                    <label><strong>ความสนใจเพิ่มเติม :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" id="interest_web" name="interests" value="Web Design">
+                                                    <label for="interest_web">🌐 Web Design (การออกแบบเว็บไซต์)</label><br>
+
+                                                    <input type="checkbox" id="interest_db" name="interests" value="Database">
+                                                    <label for="interest_db">🗄️ Database (ระบบฐานข้อมูล)</label><br>
+
+                                                    <input type="checkbox" id="interest_coding" name="interests" value="Coding">
+                                                    <label for="interest_coding">💻 Coding (การเขียนโปรแกรม)</label><br>
+
+                                                    <input type="checkbox" id="interest_network" name="interests" value="Network">
+                                                    <label for="interest_network">🔌 Network (ระบบเครือข่ายคอมพิวเตอร์)</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" valign="top">
+                                                    <label for="address"><strong>ที่อยู่ปัจจุบัน :</strong></label>
+                                                </td>
+                                                <td>
+                                                    <textarea id="address" name="address" rows="4" cols="45" placeholder="บ้านเลขที่ หมู่ ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์"></textarea>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </fieldset>
+
+                                    <br>
+                                    <hr color="#e2e8f0" size="1">
+                                    <br>
+
+                                    <!-- ปุ่มดำเนินการ -->
+                                    <div align="center">
+                                        <button type="submit">
+                                            <font size="3"><strong>&nbsp;&nbsp;✅ ลงทะเบียน&nbsp;&nbsp;</strong></font>
+                                        </button>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button type="reset">
+                                            <font size="3">&nbsp;&nbsp;🔄 ล้างข้อมูล&nbsp;&nbsp;</font>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </main>
+            </td>
+        </tr>
+
+        <!-- ส่วนท้ายของเว็บเพจ (Footer) -->
+        <tr>
+            <td bgcolor="#1e293b" align="center">
+                <footer>
+                    <br>
+                    <p><font color="#cbd5e1" size="2">&copy; สงวนลิขสิทธิ์ 2026 แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคสุราษฎร์ธานี</font></p>
+                    <br>
+                </footer>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
